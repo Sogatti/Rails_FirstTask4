@@ -1,0 +1,29 @@
+<h3>ユーザー編集</h3>
+
+<%= form_with model: @user do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :title ,"名前" %></th>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :start ,"メールアドレス" %></th>
+      <td><%= f.text_field :start %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :end ,"年齢" %></th>
+      <td><%= f.text_field :end %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :allday ,"一言紹介" %></th>
+      <td><%= f.text_area :allday %></td>
+    </tr>
+  </table>
+
+  <div>
+    <ul>
+      <li><%= f.submit "編集を完了する" %></li>
+      <li><%= link_to "ユーザー情報一覧に戻る", :users %></li>
+    </ul>
+  </div>
+<% end %>

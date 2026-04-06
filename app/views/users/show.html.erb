@@ -1,0 +1,26 @@
+<h3>ユーザー詳細</h3>
+
+<table>
+  <tr>
+    <th>名前</th>
+    <td><%= @user.title %></td>
+  </tr>
+  <tr>
+    <th>メールアドレス</th>
+    <td><%= @user.start %></td>
+  </tr>
+  <tr>
+    <th>年齢</th>
+    <td><%= @user.end %></td>
+  </tr>
+  <tr>
+    <th>一言紹介</th>
+    <td><%= @user.allday %></td>
+  </tr>
+</table>
+
+<div>
+  <ul>
+    <li><%= link_to "ユーザー情報一覧に戻る", :users %></li>
+  </ul>
+</div>
