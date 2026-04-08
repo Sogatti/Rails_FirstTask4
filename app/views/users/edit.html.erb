@@ -3,20 +3,24 @@
 <%= form_with model: @user do |f| %>
   <table>
     <tr>
-      <th><%= f.label :title ,"名前" %></th>
+      <th><%= f.label :title ,"タイトル" %></th>
       <td><%= f.text_field :title %></td>
     </tr>
     <tr>
-      <th><%= f.label :start ,"メールアドレス" %></th>
+      <th><%= f.label :start ,"開始日" %></th>
       <td><%= f.text_field :start %></td>
     </tr>
     <tr>
-      <th><%= f.label :end ,"年齢" %></th>
+      <th><%= f.label :end ,"終了日" %></th>
       <td><%= f.text_field :end %></td>
     </tr>
     <tr>
-      <th><%= f.label :allday ,"一言紹介" %></th>
+      <th><%= f.label :allday ,"終日" %></th>
       <td><%= f.text_area :allday %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :memo ,"スケジュールメモ" %></th>
+      <td><%= f.text_area :memo %></td>
     </tr>
   </table>
 

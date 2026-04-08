@@ -18,8 +18,13 @@
     </tr>
 
     <tr>
-      <th><%= f.label :allday ,"スケジュールメモ" %></th>
+      <th><%= f.label :allday ,"終日の場合は記入" %></th>
       <td><%= f.text_area :allday %></td>
+    </tr>
+
+    <tr>
+      <th><%= f.label :memo ,"スケジュールメモ" %></th>
+      <td><%= f.text_area :memo %></td>
     </tr>
   </table>
 
