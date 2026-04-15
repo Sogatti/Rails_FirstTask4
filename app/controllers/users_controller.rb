@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:title, :start, :end, :allday))
+    @user = User.new(params.require(:user).permit(:title, :start, :end, :allday, :memo))
     if @user.save
       flash[:notice] = "ユーザーを新規登録しました"
       redirect_to :users
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(params.require(:user).permit(:title, :start, :end, :allday))
+    if @user.update(params.require(:user).permit(:title, :start, :end, :allday, :memo))
       flash[:notice] = "ユーザーIDが「#{@user.id}」の情報を更新しました"
       redirect_to :users
     else

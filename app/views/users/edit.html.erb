@@ -1,5 +1,7 @@
 <h3>ユーザー編集</h3>
 
+<%= render "shared/error", obj: @user %>
+
 <%= form_with model: @user do |f| %>
   <table>
     <tr>
@@ -16,11 +18,11 @@
     </tr>
     <tr>
       <th><%= f.label :allday ,"終日" %></th>
-      <td><%= f.text_area :allday %></td>
+      <td><%= f.check_box :allday %></td>
     </tr>
     <tr>
       <th><%= f.label :memo ,"スケジュールメモ" %></th>
-      <td><%= f.text_area :memo %></td>
+      <td><%= f.text_field :memo %></td>
     </tr>
   </table>
 

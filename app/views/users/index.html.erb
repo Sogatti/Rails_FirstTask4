@@ -1,4 +1,5 @@
-<h3>予定一覧</h3>
+<h2>予定一覧</h2>
+<h3>本日の日付<%= Date.current.strftime("%Y年%m月%d日") %></h3>
 
 <p><%= link_to "ユーザー新規登録", :new_user %></p>
 
@@ -29,7 +30,11 @@
         <td><%= user.title %></td>
         <td><%= user.start %></td>
         <td><%= user.end%></td>
-        <td><%= user.allday %></td>
+        <td><% if user.allday == true %>
+              ⚪︎
+            <% else %>
+            <% end %>
+        </td>
         <td><%= user.updated_at.to_fs(:datetime_jp) %></td>
         <td><%= user.created_at.to_fs(:datetime_jp) %></td>
         <td>
@@ -45,32 +50,8 @@
     <% end %>
   </tbody>
 </table>
+<footer>予定合計<%= @users.count%>件</footer>
 
-<h3>投稿一覧</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>投稿内容</th>
-      <th>更新日時</th>
-      <th>投稿日時</th>
-      <th>投稿者(User_id)</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><%= post.updated_at.to_fs(:datetime_jp) %></td>
-        <td><%= post.created_at.to_fs(:datetime_jp) %></td>
-        <td><%= post.user_id %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<p><%= link_to "ユーザー新規登録", :new_user %></p>
 
 
 
