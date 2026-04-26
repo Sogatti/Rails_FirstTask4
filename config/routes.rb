@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get "posts/index"
   get "users/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -15,5 +14,4 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :users
-  resources :posts
 end

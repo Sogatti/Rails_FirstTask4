@@ -3,7 +3,6 @@ class User < ApplicationRecord
     validates :memo, length: { maximum: 500 }
     validates :start, presence: true
     validates :end, presence: true
-
     validate :start_end_check,
 
   def start_end_check
